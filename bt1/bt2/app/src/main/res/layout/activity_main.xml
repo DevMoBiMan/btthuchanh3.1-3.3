@@ -1,0 +1,42 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <!-- RecyclerView để hiển thị danh sách trái cây -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <!-- RadioGroup để chọn cách hiển thị danh sách (lưới hoặc danh sách) -->
+    <RadioGroup
+        android:id="@+id/viewModeRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/listViewRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Danh sách"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/gridViewRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lưới"/>
+    </RadioGroup>
+
+    <!-- Button để xác nhận lựa chọn -->
+    <Button
+        android:id="@+id/confirmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xác nhận lựa chọn"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>
